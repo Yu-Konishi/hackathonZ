@@ -13,9 +13,4 @@ export default (io, socket) => {
   socket.on("publishEvent", (data) => {
     io.sockets.emit("publishEvent", data)
   })
-
-  // メモを送信する
-  socket.on("memoEvent", (data) => {
-    socket.emit("publishEvent", data)
-  })
 }

@@ -37,7 +37,7 @@ const onExit = () => {
 // メモを画面上に表示する
 const onMemo = () => {
   // メモの内容を表示
-  socket.emit("memoEvent", userName.value + "さんのメモ：" + chatContent.value)
+  chatList.unshift(userName.value + "さんのメモ：" + chatContent.value)
   // 入力欄を初期化
   chatContent.value = ""
 }
